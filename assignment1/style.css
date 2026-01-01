@@ -1,0 +1,247 @@
+:root {
+  --bg-gradient: linear-gradient(180deg, #0d1b2a 0%, #1b263b 40%, #415a77 100%);
+  --panel: #ffffff;
+  --accent: #ffcc00;   /* golden accent for sports vibe */
+  --text: #333333;
+  --muted: #666666;
+  --border: #dddddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg-gradient); /* sporty background */
+}
+
+/* Page layout */
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: linear-gradient(90deg, #14213d, #1f4068);
+  border-bottom: 4px solid var(--accent);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  background: #1f4068;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+  color: #14213d;
+}
+
+/* Menubar */
+nav {
+  background: #eeeeee;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+}
+
+.menu a {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.menu a:hover {
+  background: #dddddd;
+}
+
+.menu a.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Main layout */
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Sidebar */
+aside {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+aside h3 {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+aside .item {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fafafa;
+  margin-bottom: 16px;
+}
+
+aside .item b {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+aside .item span {
+  display: block;
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+/* Sidebar links */
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.sidebar-links li {
+  margin: 6px 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: var(--text);
+}
+
+/* Content cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.card-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Footer */
+footer {
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  padding: 16px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    order: 2;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

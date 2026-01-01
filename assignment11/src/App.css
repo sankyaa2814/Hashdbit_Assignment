@@ -1,0 +1,82 @@
+/* App.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Container Dark Mode */
+.container.dark {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); /* Golden glow */
+  color: #f5f5f5;
+}
+
+/* Container Light Mode */
+.container.light {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffd700; /* Golden accent */
+  letter-spacing: 1px;
+}
+
+.output {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container.light .output {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle button {
+  background: linear-gradient(135deg, #ffd700, #ffb400);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}

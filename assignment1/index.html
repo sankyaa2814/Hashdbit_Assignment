@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Webpage</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.SE0qDoKrTiD0zzlnKTwvtgHaEa?pid=Api&P=0&h=220" alt="Site logo">
+        <span>Sports Arena</span>
+      </div>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Twitter" title="Twitter">T</a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub" title="GitHub">GH</a>
+      </div>
+    </header>
+
+    <!-- Menubar -->
+    <nav aria-label="Primary">
+      <div class="menu">
+        <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Main content area -->
+    <div class="main">
+      <!-- Sidebar -->
+      <aside>
+        <h3>Sidebar</h3>
+
+        <!-- Quick Links -->
+        <div class="item">
+          <b>Quick Links</b>
+          <ul class="sidebar-links">
+            <li><a href="#football">Football</a></li>
+            <li><a href="#kabaddi">Kabaddi</a></li>
+            <li><a href="#volleyball">Volleyball</a></li>
+          </ul>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="item">
+          <b>Upcoming Events</b>
+          <span>⚽ Football World Cup 2026</span>
+          <span>🤼 Pro Kabaddi League 2025</span>
+          <span>🏐 Olympics Volleyball Finals</span>
+        </div>
+
+        <!-- Fun Facts -->
+        <div class="item">
+          <b>Did You Know?</b>
+          <span>Football is played by 250M+ players worldwide.</span>
+          <span>Kabaddi originated in ancient Tamil Nadu.</span>
+          <span>Volleyball was invented in 1895 in the USA.</span>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <section class="content" aria-label="Main content">
+        <div class="cards">
+          <article class="card" id="football">
+            <div class="card-header">Football</div>
+            <div class="card-media">
+              <img src="./football.jpg" alt="Football image">
+            </div>
+            <div class="card-body">
+              Football (also called soccer in many countries) is the world’s most popular team sport, played by two squads of eleven players each, with the simple objective of scoring more goals than the opponent within 90 minutes of play.
+            </div>
+          </article>
+
+          <article class="card" id="kabaddi">
+            <div class="card-header">Kabaddi</div>
+            <div class="card-media">
+              <img src="./Kabbadi.jpg" alt="Kabaddi image">
+            </div>
+            <div class="card-body">
+              Kabaddi is a traditional South Asian contact sport where two teams compete by sending a “raider” into the opponent’s half to tag defenders and return safely, all in a single breath. It blends elements of wrestling, rugby, and tag, demanding strength, agility, and strategy.
+            </div>
+          </article>
+
+          <article class="card" id="volleyball">
+            <div class="card-header">Volleyball</div>
+            <div class="card-media">
+              <img src="./Volleyball1.jpg" alt="Volleyball image">
+            </div>
+            <div class="card-body">
+              Volleyball is a fast-paced team sport where two teams of six players compete to ground the ball on the opponent’s court, separated by a net. It emphasizes agility, teamwork, and strategy, and is played both indoors and outdoors worldwide.
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      Sample footer text — © 2025 Sports Arena. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

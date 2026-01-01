@@ -1,0 +1,36 @@
+.points-table-container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.points-table th,
+.points-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.points-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.points-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.points-table tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Highlight top 4 teams */
+.qualifier {
+  background-color: #d4edda; /* light green */
+  font-weight: bold;
+}
